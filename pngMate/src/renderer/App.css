@@ -1,0 +1,51 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* hides scrollbars */
+  height: 100%;
+  width: 100%;
+}
+
+.drag-region {
+  -webkit-app-region: drag;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; /* or pick your own color */
+  overflow: visible;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+.Hello {
+  text-align: center;
+}
+
+.audio_button {
+  margin-left: 50px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.floating-group {
+  /* 1. This makes the whole group "float" on the screen */
+  position: absolute;
+  top: 50px;     /* Adjust this to move the group up/down */
+  left: 50px;    /* Adjust this to move the group left/right */
+
+  /* 2. This is the magic: it aligns the items inside side-by-side */
+  display: flex;
+  align-items: center; /* This vertically centers the head and box */
+}
+.button-stack {
+  display: flex;
+  flex-direction: column; /* This makes its children stack vertically */
+  align-items: center;   /* This centers the button under the head */
+}

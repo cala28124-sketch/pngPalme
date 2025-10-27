@@ -1,0 +1,53 @@
+
+.text-box-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+
+.text-box {
+    /* Base Box Styles */
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    width: 350px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+    margin-top: -150px;
+    border-top: 18px solid white;
+    border-bottom: 18px solid white;
+
+    /* Scrolling Functionality */
+    max-height: 150px;
+    overflow-y: auto; /* This property requires the tail to be on the wrapper */
+}
+
+
+.text-box-wrapper:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    z-index: 1; /* Ensures the tail is above other content */
+
+    /* Shape and Color of the Tail */
+    border-left: 24px solid #fff;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #fff;
+    border-bottom: 20px solid transparent;
+
+    /* Positioning relative to the wrapper */
+    left: 24px;
+    bottom: -20px;
+}
+
+
+
+.text-box p {
+    margin: 0;
+    color: #333;
+    text-align: left;
+}
